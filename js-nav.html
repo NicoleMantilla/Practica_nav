@@ -7,56 +7,57 @@
     <title>Document</title>
 </head>
 <body>
+    <script src="./js-nav.js"></script>
     <div>
         <div>
             <h1>
-                Summary
+                SUMMARY
             </h1>
             <span>
-                <div>
+                <section>
                     <div class=""> 
-                        <span>Ingresos </span>
+                        <span>Incomes </span>
                         <span>0&nbsp;€</span>
                     </div>
                     <hr class=""> 
                     <div>
-                        <span>Gastos</span>
+                        <span>Expenses</span>
                         <span>0&nbsp;€</span>
                     </div>
                 </div>
 
-                    <div>
-                        <h1>Ahorro</h1>
+                    <article>
+                        <h1>SAVE MONEY</h1>
                         <h2>
                         "0.000&nbsp;€"  
                         </h2>
-                    </div>
+                    </article>
                 </span>
 
                 <div>
-                    <h2>Historial</h2>
+                    <h2 id="historialDisplay">HISTORY</h2>
                 </div>
                 <hr>
 
                 <section>
                     <div>
                         <div>
-                            <h1>Añadir nueva transación</h1>
-                        </div>
+                            <h1>ADD NEW TRANSACTION </h1>
+                        <form novalidate>
                             <div>
                                 <h2>Concepto</h2>
-                                <input id="concepto" type="text" placeholder="Añade concepto..." />
+                                <input id="conceptInput" type="text" placeholder="Añade concepto..." />
                             </div>
                             <div>
                                 <h2>Cantidad</h2>
                                 <h4>(negativo-gasto, positivo-ingreso)</h4>
-                                <input id="cantidad" type="text" placeholder="introduce cantidad..." />
+                                <input id="quantityInput" type="text" placeholder="introduce cantidad..." />
                             </div>
                            
                             <div>
-                                <button type="submit" id="add">Añadir transacción</button>
+                                <button type="submit" id="addTrans">add transaction</button>
                             </div>
-                    </div>
+                        </form>
                    
                 </section>
                 <hr>
