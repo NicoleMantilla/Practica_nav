@@ -6,63 +6,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <script src="./js-nav.js"></script>
-    <div>
+<body> 
+    <div class="container ">
         <div>
             <h1>
                 SUMMARY
             </h1>
-            <span>
+            <section>
+                <h1>SAVINGS</h1>
+                <p id="amountSaving">
+                "0.000&nbsp;€"  
+                </p>
+            </section>
                 <section>
-                    <div class=""> 
+                    <div class="" id="totalIncomes"> 
                         <span>Incomes </span>
-                        <span>0&nbsp;€</span>
+                        <span id="totalIncomes">0&nbsp;€</span>
                     </div>
-                    <hr class=""> 
-                    <div>
+                    <hr> 
+                    <div id="totalExpenses">
                         <span>Expenses</span>
                         <span>0&nbsp;€</span>
                     </div>
-                </div>
-
-                    <article>
-                        <h1>SAVE MONEY</h1>
-                        <h2>
-                        "0.000&nbsp;€"  
-                        </h2>
-                    </article>
-                </span>
-
-                <div>
-                    <h2 id="historialDisplay">HISTORY</h2>
-                </div>
-                <hr>
+                </section>
 
                 <section>
+                    <h2> HISTORY</h2>
+                    <hr>
+                    <ul id="hisList">
+                    </ul>
+                </section>
+                <hr>
+                <section>
                     <div>
-                        <div>
+                       <form novalidate id="addTrans">
                             <h1>ADD NEW TRANSACTION </h1>
-                        <form novalidate>
+                            <div id ="error-addTrans"></div>
                             <div>
-                                <h2>Concepto</h2>
-                                <input id="conceptInput" type="text" placeholder="Añade concepto..." />
+                                <label>Subject</label>
+                                <input 
+                                id="subjectInput" 
+                                type="text" 
+                                placeholder="add subject..." />
                             </div>
                             <div>
-                                <h2>Cantidad</h2>
-                                <h4>(negativo-gasto, positivo-ingreso)</h4>
-                                <input id="quantityInput" type="number" placeholder="introduce cantidad..." />
+                                <label>Amount</label>
+                                <label>(negativo-gasto, positivo-ingreso)</label>
+                                <input 
+                                id="amountInput" 
+                                type="number" 
+                                placeholder="add amount..." />
                             </div>
-                           
-                            <div>
-                                <button type="submit" id="addTrans">add transaction</button>
-                            </div>
+                           <br>
+                                <div>
+                                    <input type="submit" value="Calculate"/>
+                                </div>
+                            <br/>
                         </form>
-                   
                 </section>
                 <hr>
         </div>
     </div>
+    <script src="./js-nav.js"></script>
     </body>
      
 </html>
