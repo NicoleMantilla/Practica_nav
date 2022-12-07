@@ -1,13 +1,27 @@
-const buttonElement = document.querySelector('#addTrans');
-// añadir listener al evento click del botón
-buttonElement.addEventListener("click", () => {
+//Guardar todas las variables. 
+const amountSaving = document.querySelector('#amountSaving')
+const totalIncomes = document.querySelector('#totalIncomes')
+const totalExpenses = document.querySelector('#totalExpenses')
+const addTrans = document.querySelector('#addTrans')
+const hisDisplay = document.querySelector('#hisList')
 
-    const inputElement1 = document.querySelector('#conceptoInput');
-// guardamos el valor en localStorage
-    localStorage.setItem("addText", inputElement1.value);
-// accedemos al DOM para buscar el párrafo
-const historialElement = document.querySelector('#historialDisplay');
 
-// escribimos el texto que se ha introducido en el input dentro del parrafo
-historialElement.textContent = inputElement1.value;
-})
+//capturar en un evento el formulario 
+
+addTrans.addEventListener('submit', addTransaction)
+
+function addTransaction(event){
+    event.preventDefault()
+
+   const subjectInput = document.getElementById('subjectInput').value
+   const amountInput = document.getElementById('amountInput').value
+
+
+    const incomes = {
+        subject: subjectInput.value,
+        amount: +amountInput.value,
+        id: Math.floor(Math.random()* 100),
+    }
+
+}
+
