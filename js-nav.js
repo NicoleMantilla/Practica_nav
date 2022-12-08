@@ -3,54 +3,45 @@ const amountSaving = document.querySelector('#amountSaving')
 const incomes = document.querySelector('#incomes')
 const expenses = document.querySelector('#expenses')
 const hisList = document.querySelector('#hisList')
-const {typeInput, amountInput} = itemSummary
 
-//historial 
+// capturamos el evento en el listener y guardamos el valor en localStorage
 
-
-//capturar en un evento el formulario 
-
-let listIncomes = {}
-const addTrans = document.querySelector('#addTrans')
-addTrans.addEventListener('submit', addTransaction)
-
-function addTransaction(event){
+let inputList =[]
+addTrans.addEventListener('submit',(event)=> {
     event.preventDefault()
 
-   const subjectInput = document.getElementById('typeInput').value
-   const amountInput = document.getElementById('amountInput').value
-
+    const typeInput = document.querySelector('#typeInput')
+    const amountInput = document.querySelector('#amountInput')
 
     const listIncome = {
-        subject: subjectInput.value,
-        amount: +amountInput.value,
+        subject: typeInput.value,
+        amount: amountInput.value,
         id: Math.floor(Math.random()* 100),
     }
+    inputList.push(listIncome)
 
-}
+localStorage.setItem('localHistoryTrans', JSON.stringify(inputList));
+
+typeInput.value = "";
+amountInput.value = "";
+})
+
+const textFromLocalStorage = localStorage.getItem('localHistoryTrans')
 
 
 
-// calcular los datos. 
-let itemIncomes
-let itemExpenses
-
-
-function calcExpensesIncomes(amountInput){
+/*function calcExpensesIncomes(amountInput){
 
     if (amountInput > 0){
         const sumIncomes = itemIncomes + parseInt(amountInput)
         itemIncomes = sumIncomes
   
-    } else {
+    } /*else {
         const sumExpenses = itemExpenses + parseInt(amountInput)
         itemExpenses = sumExpenses
 
    
     }
 
-}
-  const savingMoney =  (itemIncomes - itemExpenses)
-
-  console.log( itemIncomes, itemExpenses)
-
+}*/
+  
