@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>js-nav</title>
 </head>
 <body> 
     <div class="container ">
@@ -12,11 +12,9 @@
             <h1>
                 SUMMARY
             </h1>
-            <section>
+            <section id="mySavings">
                 <h1>SAVINGS</h1>
-                <p id="amountSaving">
-                "0.000&nbsp;€"  
-                </p>
+                <p id="totalSaving"></p>
             </section>
                 <section>
                     <div class="" > 
@@ -29,37 +27,33 @@
                         <span id="expenses">0&nbsp;€</span>
                     </div>
                 </section>
-
-                <section>
-                    <h2> HISTORY</h2>
-                    <hr>
-                    <ul id="hisList">
-                    </ul>
+                <h2> HISTORY</h2>
+                <hr>
+                <section id="hisList">
                 </section>
                 <hr>
                 <section>
                     <div>
-                       <form novalidate id="addTrans">
+                       
                             <h1>ADD NEW TRANSACTION </h1>
-                            <div id ="error-addTrans"></div>
+                        <form novalidate id="addTrans">
                             <div>
-                                <label>Subject</label>
+                                <label for = "typeInput">Subject</label>
                                 <input 
                                 id="typeInput" 
                                 type="text" 
                                 placeholder="add subject..." />
                             </div>
                             <div>
-                                <label>Amount</label>
+                                <label for="amountInput" >Amount</label>
                                 <label>(negativo-gasto, positivo-ingreso)</label>
                                 <input 
                                 id="amountInput" 
                                 type="number" 
                                 placeholder="add amount..." />
                             </div>
-                           <br>
                                 <div>
-                                    <input type="submit" value="Calculate"/>
+                                    <button type="submit" id="caculate">Calculate </button>
                                 </div>
                             <br/>
                         </form>
