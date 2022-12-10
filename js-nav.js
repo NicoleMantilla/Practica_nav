@@ -14,14 +14,12 @@ formTrans.addEventListener('submit',(event)=> {
         amount: +amountInput.value,
         id: Math.floor(Math.random()* 1000),
     }
-
-//  if (typeInput.value && amountInput.value !=="") {
         typeInput.value = "";
         amountInput.value = "";
 
         inputList.push(listElements);
         drawHistory(listElements);
-//   }
+
 console.log(listElements)
 
 
@@ -47,29 +45,29 @@ function drawHistory(listElements){
         historyList.appendChild(historyElement);
     
 }
- //hago todas las operaciones 
-    const quantity = inputList.map((listElements) => listElements.amount);
-    console.log(quantity)
+//hago todas las operaciones 
+const quantity = inputList.map((listElements) => listElements.amount);
+console.log(quantity)
 
-    const filterIncomes = quantity.filter((item) => item > 0)
-        console.log(filterIncomes) 
-        
-    const filterExpenses = quantity.filter((item) => item < 0)
-    console.log(filterExpenses)
+const filterIncomes = quantity.filter((item) => item > 0)
+    console.log(filterIncomes) 
+    
+const filterExpenses = quantity.filter((item) => item < 0)
+console.log(filterExpenses)
 
-    const totalIncomes = filterIncomes.reduce(function(a, b) {
-        return a + b;
-      }, 0);
-      console.log(totalIncomes);
+const totalIncomes = filterIncomes.reduce(function(a, b) {
+    return a + b;
+  }, 0);
+  console.log(totalIncomes);
 
-    const totalExpenses = filterExpenses.reduce(function(a, b) {
-        return a + b;
-      }, 0);
-      console.log(totalExpenses);
+const totalExpenses = filterExpenses.reduce(function(a, b) {
+    return a + b;
+  }, 0);
+  console.log(totalExpenses);
 
-    function savings(totalIncomes, totalExpenses) {
-     return totalIncomes - totalExpenses;
-    }
+function savings(totalIncomes, totalExpenses) {
+ return totalIncomes - totalExpenses;
+}
 
 //Guardar todas las variables. 
 const amountSaving = document.querySelector('#amountSaving')
