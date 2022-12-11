@@ -33,10 +33,11 @@ function drawHistory(listElements){
         historyElement.setAttribute('id', listElements.id)
 
         let transElement = `
-        <p> Subject: ${listElements.subject}</p>
-        <p> Amount: ${listElements.amount}</p> 
-        <button class='delete-button' onclick = 'deletetransaction(${listElements.id})'>x</button> 
-        `;
+        <div class= "styleInEx">
+            <p>  Subject: ${listElements.subject}</p>
+            <p> Amount: ${listElements.amount}</p> 
+            <button class='delete-button' onclick = 'deletetransaction(${listElements.id})'>x</button> 
+        </div>`;
 
         historyElement.innerHTML = transElement;
 
