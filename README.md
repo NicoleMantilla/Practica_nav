@@ -1,4 +1,8 @@
 # Practica_nav
+<div align="center">
+  <a href="https://github.com/NicoleMantilla/Practica_nav">
+    <img src="https://i.pinimg.com/564x/32/81/b7/3281b7c2958bb9241935034d84de2a04.jpg" alt="Logo">
+  </a>
 Control de gastos
 Necesitamos desarrollar una web que nos ayude a gestionar nuestros ingresos y gastos, con el objetivo de conocer el dinero que tenenos ahorrado.
 
