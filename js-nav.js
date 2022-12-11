@@ -11,17 +11,15 @@ formTrans.addEventListener('submit',(event)=> {
 
     let listElements = {
         subject: typeInput.value,
-        amount: +amountInput.value,
+        amount: amountInput.value,
         id: Math.floor(Math.random()* 1000),
     }
-        typeInput.value = "";
-        amountInput.value = "";
+    typeInput.value = "";
+    amountInput.value = "";
 
-        inputList.push(listElements);
-        drawHistory(listElements);
-
-console.log(listElements)
-
+    inputList.push(listElements);
+    drawHistory(listElements);
+    calculated();
 
 })
 
@@ -45,38 +43,37 @@ function drawHistory(listElements){
         historyList.appendChild(historyElement);
     
 }
-//hago todas las operaciones 
-const quantity = inputList.map((listElements) => listElements.amount);
-console.log(quantity)
-
-const filterIncomes = quantity.filter((item) => item > 0)
-    console.log(filterIncomes) 
-    
-const filterExpenses = quantity.filter((item) => item < 0)
-console.log(filterExpenses)
-
-const totalIncomes = filterIncomes.reduce(function(a, b) {
-    return a + b;
-  }, 0);
-  console.log(totalIncomes);
-
-const totalExpenses = filterExpenses.reduce(function(a, b) {
-    return a + b;
-  }, 0);
-  console.log(totalExpenses);
-
-function savings(totalIncomes, totalExpenses) {
- return totalIncomes - totalExpenses;
-}
 
 //Guardar todas las variables. 
-const amountSaving = document.querySelector('#amountSaving')
+const totalSavings = document.querySelector('#Saving')
 const incomes = document.querySelector('#incomes')
 const expenses = document.querySelector('#expenses')
 
-//dibujar los ahorros 
-const totalSavings = document.querySelector('#totalSaving')
+function calculated(){
 
+//hago todas las operaciones 
+const quantity = inputList.map((listElements) => listElements.amount);
+const filterIncomes = quantity.filter((item) => item > 0)    
+const filterExpenses = quantity.filter((item) => item < 0)
+const totalIncomes = filterIncomes.reduce(function(a, b) {
+    return Number(a) + Number(b);
+  }, 0);
+const totalExpenses = filterExpenses.reduce(function(a, b) {
+    return Number(a) + Number(b);
+  }, 0);
+  console.log(totalExpenses); 
+const save = totalIncomes + totalExpenses;
+incomes.innerText = `${totalIncomes}€`;
+expenses.innerText = `${totalExpenses}€`;
+totalSavings.innerText = `${save}€`;
+}
 
-
+function deletetransaction(listElementsId){
+    let newinputList = []
+    newinputList = inputList.filter(item => item.id !== listElementsId )
+    inputList = newinputList
+    const listElements = document.getElementById(listElementsId);
+    listElements.remove();
+    calculated();
+}
   
