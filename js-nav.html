@@ -7,61 +7,60 @@
     <title>js-nav</title>
 </head>
 <body> 
-    <div class="container ">
-        <div>
-            <h1>
-                SUMMARY
-            </h1>
-            <section id="mySavings">
-                <h1>SAVINGS</h1>
-                <p id="totalSaving"></p>
-            </section>
-                <section>
-                    <div class="" > 
-                        <span>Incomes </span>
-                        <span id="incomes">0&nbsp;€</span>
-                    </div>
-                    <hr> 
-                    <div >
-                        <span>Expenses</span>
-                        <span id="expenses">0&nbsp;€</span>
-                    </div>
+        <div class="right-container">
+            <div>
+                <h1>
+                    SUMMARY
+                </h1>
+                <section id="mySavings">
+                    <h1>Your Budget</h1>
+                    <p id="Saving"></p>
                 </section>
-                <h2> HISTORY</h2>
-                <hr>
-                <section id="hisList">
-                </section>
-                <hr>
-                <section>
-                    <div>
-                       
-                            <h1>ADD NEW TRANSACTION </h1>
-                        <form novalidate id="addTrans">
-                            <div>
-                                <label for = "typeInput">Subject</label>
-                                <input 
-                                id="typeInput" 
-                                type="text" 
-                                placeholder="add subject..." />
-                            </div>
-                            <div>
-                                <label for="amountInput" >Amount</label>
-                                <label>(negativo-gasto, positivo-ingreso)</label>
-                                <input 
-                                id="amountInput" 
-                                type="number" 
-                                placeholder="add amount..." />
-                            </div>
+                    <section>
+                        <div class="" > 
+                            <span>Incomes </span>
+                            <p class= "incomes" id="incomes">€</p>
+                        </div>
+                        <hr> 
+                        <div >
+                            <span>Expenses</span>
+                            <p id="expenses">€</p>
+                        </div>
+                    </section>
+                    <h2> HISTORY</h2>
+                    <hr>
+                    <section id="hisList">
+                    </section>
+                    <hr>
+                    <section>
+                        <div class="calc-container ">
+                                <h1>ADD NEW TRANSACTION </h1>
+                            <form novalidate id="addTrans">
                                 <div>
-                                    <button type="submit" id="caculate">Calculate </button>
+                                    <label for = "typeInput">Subject</label>
+                                    <input 
+                                    id="typeInput" 
+                                    type="text" 
+                                    placeholder="add subject..." />
                                 </div>
-                            <br/>
-                        </form>
-                </section>
-                <hr>
+                                <div>
+                                    <label for="amountInput" >Amount</label>
+                                    <label>(negativo-gasto, positivo-ingreso)</label>
+                                    <input 
+                                    id="amountInput" 
+                                    type="number" 
+                                    placeholder="add amount..." />
+                                </div>
+                                    <div>
+                                        <button type="submit" id="caculate">Calculate </button>
+                                    </div>
+                                <br/>
+                            </form>
+                    </section>
+                    <hr>
+            </div>
         </div>
-    </div>
-    <script src="./js-nav.js"></script>
+        <script src="./js-nav.js"></script>
     </body>
      
 </html>
