@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-nav con css</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body> 
+    <div class="logo">
+        <img id="foto" 
+        src="imagenes/savingMoney.jpeg" width="270" height="180"/>
+    </div> 
+        <div>
+            <div>
+                <section>
+                    <div class="titulo">
+                        <h1>Your Budget</h1>
+                        <p class="budget__value" id="Saving"></p>
+                    </div>
+
+                            <div class = "styleincexp"> 
+                                <span>Incomes </span>
+                                <p id="incomes">€</p>
+                            </div>
+                            <div class = "styleincexp">
+                                <span>Expenses</span>
+                                <p id="expenses">€</p>
+                            </div>
+                    </section>
+                      
+                    <section  id="hisList">
+                        <h1> HISTORY</h1>
+                    </section>
+                    
+                    
+                    <hr>
+                    <section>
+                        <div>
+                                <h2>ADD NEW TRANSACTION </h2>
+                            <form novalidate id="addTrans">
+                                <div>
+                                    <label for = "typeInput">Subject</label>
+                                    <input 
+                                    id="typeInput" 
+                                    type="text" 
+                                    placeholder="add subject..." />
+                                </div>
+                                <div>
+                                    <label for="amountInput" >Amount</label>
+                                    <label>(negative-expensives, positive-incomes)</label>
+                                    <input 
+                                    id="amountInput" 
+                                    type="number" 
+                                    placeholder="add amount..." />
+                                </div>
+                                    <div>
+                                        <button class="css-button-arrow--yellow " type="submit" id="caculate">Calculate </button>
+                                    </div>
+                                <br/>
+                            </form>
+                        </div>
+                    </section>
+                    <hr>
+            </div>
+        </div>
+        <script src="./js-nav.js"></script>
+    </body>
+     
+</html>
