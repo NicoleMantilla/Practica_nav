@@ -34,8 +34,8 @@ function drawHistory(listElements){
 
         let transElement = `
         <div class= "styleInEx">
-            <p>  Subject: ${listElements.subject}</p>
-            <p> Amount: ${listElements.amount}</p> 
+            <p>   ${listElements.subject}</p>
+            <p>  ${listElements.amount}€</p> 
             <button class='delete-button' onclick = 'deletetransaction(${listElements.id})'>x</button> 
         </div>`;
 
